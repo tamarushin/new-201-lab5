@@ -1,8 +1,14 @@
-function multiply(a,b){
-  var theproduct = a * b;
-  var message = 'The product of ' + a +  ' and ' + b + ' is ' + theproduct + '.';
-  console.log(message);
-  return [theproduct, message];
+function sumAndMultiply(a,b,c){ //eslint-disable-line
+
+var firstSum = sum(a,b)[0];
+var wholeSum = sum(firstSum,c)[0];
+var firstProduct = multiply(a,b)[0];
+var wholeProduct = multiply(firstProduct,c)[0];
+var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + wholeSum + '.';
+var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + wholeProduct + '.';
+return [wholeSum, wholeProduct, sumMessage, productMessage];
+console.log(sumMessage, productMessage);
 }
-// // TODO: Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+
+// TODO: Here is the test for sumAndMultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
