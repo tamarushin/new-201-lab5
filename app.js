@@ -1,14 +1,12 @@
-function sumAndMultiply(a,b,c){ //eslint-disable-line
+var testArray = [2,3,4]; //eslint-disable-line
 
-var firstSum = sum(a,b)[0];
-var wholeSum = sum(firstSum,c)[0];
-var firstProduct = multiply(a,b)[0];
-var wholeProduct = multiply(firstProduct,c)[0];
-var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + wholeSum + '.';
-var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + wholeProduct + '.';
-return [wholeSum, wholeProduct, sumMessage, productMessage];
-console.log(sumMessage, productMessage);
+function sumArray(testArray){ //eslint-disable-line
+
+var one = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
+var message = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + one + ' is their sum.';
+console.log(message)
+return [one, message];
 }
 
-// TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// TODO: Here is the test for sumArray(); uncomment it to run it
+testSumArray(testArray);
